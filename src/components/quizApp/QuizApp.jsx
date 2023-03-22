@@ -8,8 +8,9 @@ function QuizApp() {
         fetchData();
     }, []);
 
-    function fetchData() {
-        questionService.fetchData();
+    async function fetchData() {
+        const res = await questionService.fetchData();
+        console.log(res.data);
     }
 
     return (
