@@ -1,11 +1,11 @@
 import Answer from "../answer/Answer";
 
-function AnswerList() {
+function AnswerList(props) {
+
     return (
-        <>
-            <h3>AnswerList</h3>
-            <Answer />
-        </>
+        <div className="answer-container">
+            {props.answerList.map((a, i) => <Answer key={i} id={i} answer={a}/>)}
+        </div>
     );
 }
 export default AnswerList;
